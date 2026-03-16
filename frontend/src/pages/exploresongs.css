@@ -1,0 +1,290 @@
+/* =========================
+   PAGE + ANIMATED WAVES
+========================= */
+
+.songs-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 24px;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #2b0a3d 0%, #070611 60%);
+  overflow: hidden;
+}
+
+/* Animated wave layers */
+.songs-page::before,
+.songs-page::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background-repeat: repeat-x;
+  background-size: 1200px 300px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.songs-page::before {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(185, 107, 255, 0.4),
+    transparent
+  );
+  animation: waveMove 22s linear infinite;
+}
+
+.songs-page::after {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(120, 80, 255, 0.25),
+    transparent
+  );
+  animation: waveMoveReverse 30s linear infinite;
+}
+
+@keyframes waveMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes waveMoveReverse {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+/* Content always above waves */
+.songs-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.songs-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.songs-header h1 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, #ffffff, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.songs-header p {
+  font-size: 1.05rem;
+  color: #cbb6e5;
+}
+
+.songs-header p span {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+/* =========================
+   SONG LIST CONTAINER
+========================= */
+
+.songs-list {
+  max-width: 1100px;
+  margin: auto;
+  padding: 8px;
+  border-radius: 24px;
+  background: rgba(20, 12, 40, 0.45);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.05),
+    0 30px 60px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   SONG ROW (CARD STYLE)
+========================= */
+
+.song-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 22px;
+  margin: 10px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.song-row:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    rgba(185,107,255,0.22),
+    rgba(80,30,120,0.18)
+  );
+  box-shadow: 0 12px 30px rgba(185,107,255,0.35);
+}
+
+.song-row.active {
+  box-shadow: 0 0 0 2px rgba(185,107,255,0.6);
+}
+
+/* =========================
+   INDEX
+========================= */
+
+.song-index {
+  width: 32px;
+  text-align: right;
+  color: #a99ac5;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   ICON (ALBUM CIRCLE)
+========================= */
+
+.song-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(236,72,153,0.4);
+  flex-shrink: 0;
+}
+
+/* =========================
+   SONG INFO
+========================= */
+
+.song-info {
+  flex: 1;
+}
+
+.song-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.song-info p {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #cbb6e5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   PLAY ICON
+========================= */
+
+.play-icon {
+  font-size: 1.35rem;
+  color: #c084fc;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.song-row:hover .play-icon {
+  transform: scale(1.25);
+  color: #f0c9ff;
+}
+
+/* =========================
+   OPTIONAL PLAYER
+========================= */
+
+.audio-player {
+  position: sticky;
+  bottom: 0;
+  margin-top: 40px;
+  padding: 18px;
+  background: linear-gradient(90deg, #0c0820, #1a0b2e);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.audio-player p {
+  font-size: 0.85rem;
+  color: #d6c6ef;
+  margin-bottom: 10px;
+}
+
+audio {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+/* =========================
+   SEARCH BAR (LEFT-ALIGNED + BOUNDARY)
+========================= */
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-container {
+  margin: 30px auto;       /* top/bottom spacing + center horizontally */
+  max-width: 1100px;       /* same as songs-list */
+  padding: 0 8px;          /* optional: small horizontal padding */
+}
+
+.search-bar {
+  width: 100%;             /* fill the container */
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 2px solid rgba(130, 119, 138, 0.8);
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.search-bar::placeholder {
+  color: #b8a9d6;
+}
+
+.search-bar:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(185, 107, 255, 0.4);
+}
+/* =========================
+   NO RESULTS MESSAGE
+========================= */
+
+.no-results {
+  text-align: center;
+  color: #cbb6e5;
+  font-size: 1rem;
+  padding: 20px;
+  letter-spacing: 0.5px;
+}

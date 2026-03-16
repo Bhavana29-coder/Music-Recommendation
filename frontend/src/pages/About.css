@@ -1,0 +1,142 @@
+.about-page {
+  min-height: 100vh;
+  padding: 60px 80px;
+  background: radial-gradient(
+      circle at top right,
+      rgba(180, 0, 255, 0.35),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(120, 0, 200, 0.3),
+      transparent 60%
+    ),
+    #0b0014;
+  color: #e6d9ff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.about-header h1 span {
+  color: #b86cff;
+}
+
+.about-header p {
+  font-size: 18px;
+  color: #d1b3ff;
+}
+
+.about-header p span {
+  color: #c77dff;
+}
+
+/* Card Base */
+.about-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 30px 40px;
+  margin: 25px auto;
+  max-width: 900px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(180, 0, 255, 0.2);
+}
+
+/* Description */
+.about-desc {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.about-desc span {
+  color: #d16bff;
+}
+
+/* Features */
+.feature-title {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #d9b8ff;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-item .icon {
+  font-size: 28px;
+  color: #d16bff;
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+/* Goal */
+.goal-text {
+  text-align: center;
+  font-size: 16px;
+}
+
+.goal-highlight {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 18px;
+  color: #d16bff;
+  font-weight: 500;
+}
+
+/* Hackathon */
+.hackathon-card {
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Team */
+.team-grid {
+  max-width: 900px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: inset 0 -2px 0 #d16bff;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}

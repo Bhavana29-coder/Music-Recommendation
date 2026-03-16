@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.profile-page {
+  height: 100vh;
+  background: radial-gradient(circle at top, #1b1b2f, #0b0b16);
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/30/07/54/galaxy-2695569_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* HEADER */
+.profile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+}
+
+.header-nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #dcdcdc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: #8b80ff;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 60px 80px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(108, 99, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(108, 99, 255, 0.5);
+}
+
+/* AVATAR */
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(145deg, #6c63ff, #8b80ff);
+  border-radius: 50%;
+  font-size: 42px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  box-shadow: 0 0 25px rgba(108, 99, 255, 0.6);
+}
+
+/* WELCOME TEXT */
+.welcome-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.welcome-text span {
+  color: #8b80ff;
+}
+
+/* SUBTEXT */
+.subtext {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+  max-width: 320px;
+  margin: 0 auto 30px;
+  line-height: 1.4;
+}
+
+/* BUTTON */
+.signout-btn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signout-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #6c63ff;
+  box-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
+}

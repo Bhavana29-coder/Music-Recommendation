@@ -1,0 +1,182 @@
+.play-page {
+  min-height: 100vh;
+  background: radi al-gradient(circle at top right, #6d28d9 0%, transparent 40%),
+              linear-gradient(180deg, #0b1020, #090b17);  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.back-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #1db954;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* Layout */
+.player-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.main-song {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.main-cover {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+audio {
+  width: 100%;
+}
+
+/* Tabs */
+.song-tabs {
+  flex: 1;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background: #111;
+  color: #aaa;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs button.active {
+  background: #1db954;
+  color: black;
+}
+
+/* Similar Songs */
+.similar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recommended-song {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #111;
+  padding: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.recommended-song:hover {
+  background: #222;
+}
+
+.recommended-song img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.rec-info {
+  flex: 1;
+}
+
+.rec-info p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.rec-info span {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* ✅ RIGHT SIDE BIG % */
+.similarity-percent {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1db954;
+}
+
+/* Audio Features */
+.feature-bar {
+  margin-bottom: 14px;
+}
+
+.feature-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #aaa;
+}
+
+.bar {
+  height: 8px;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: #1db954;
+}
+
+.percent {
+  font-size: 11px;
+  color: #888;
+}
+
+.play-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   /* force left */
+  padding: 12px 24px;            /* spacing from screen edge */
+  box-sizing: border-box;
+}
+
+/* logo wrapper */
+.play-header .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* logo image */
+.logo-img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+
